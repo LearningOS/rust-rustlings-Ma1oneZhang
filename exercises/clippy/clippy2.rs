@@ -6,8 +6,10 @@
 fn main() {
     let mut res = 42;
     let option = Some(12);
-    for x in option {
-        res += x;
+    if let Some(option) = option {
+        for x in 0..option {
+            res += x;
+        }
     }
     println!("{}", res);
 }
